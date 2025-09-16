@@ -302,12 +302,17 @@ section.what-you-love .row-container p {
   color: var(--text-secondary-light);
 }
 
+.newsletter-section p {
+  width: 85%;
+}
+
 .newsletter-section .newsletter-form label {
   font-size: 14px;
   font-weight: 500;
 }
 
 .newsletter-section .newsletter-form .form-control {
+  width: 80%;
   font-size: 16px;
 }
 
@@ -320,8 +325,8 @@ section.what-you-love .row-container p {
 
 .newsletter-section .nl-img {
   position: absolute;
-  top: 30px;
-  left: -10px;
+  top: 20px;
+  left: -50px;
   width: 100%;
 }
 
@@ -339,7 +344,8 @@ section.what-you-love .row-container p {
 .site-footer .paragraph {
   font-size: 16px;
   color: var(--text-tertiary);
-  max-width: 480px;}
+  max-width: 480px;
+}
 
 .site-footer .site-name {
   font-size: 24px;
@@ -365,13 +371,18 @@ section.what-you-love .row-container p {
 
 .site-footer .nav-bar li a {
   color: var(--text-tertiary);
-  text-decoration: none;  
+  text-decoration: none;
   font-size: 15px;
 }
 
 hr.footer-separator {
   border: none;
-  background: linear-gradient(to right, transparent, var(--tertiary-alt-color), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--tertiary-alt-color),
+    transparent
+  );
   height: 3px;
 }
 
