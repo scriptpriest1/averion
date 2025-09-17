@@ -20,13 +20,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container-fluid m-0 p-0 position-relative">
+    <div class="container-fluid m-0 p-0 position-relative overflow-hidden">
       <!-- Header -->
       <header
-        class="site-header section-container row position-absolute top-0 w-100 m-0"
+        class="site-header section-container position-absolute top-0 w-100 m-0 d-flex align-items-center justify-content-between"
       >
-        <div class="site-identity-bar col-2 col-md-3 p-0 m-0">
-          <div class="site-name-bar d-flex align-items-center gap-2">
+        <div class="site-identity-bar p-0 m-0">
+          <div class="site-name-bar d-flex align-items-center gap-1">
             <img
               src="assets/img/logo-blue.png"
               alt="averion logo"
@@ -37,22 +37,17 @@
         </div>
 
         <!-- Navigation -->
-        <div class="navigation-bar col-10 col-md-6 p-0 m-0">
-          <nav class="navbar navbar-expand-lg m-0 ms-auto m-md-auto">
-            <button
-              class="d-md-none navbar-toggler ms-auto"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
+        <div class="navigation-bar p-0 m-0">
+          <nav class="m-0 ms-auto m-md-auto">
+            <button class="d-md-none navbar-toggler ms-auto" type="button">
+              <img class="toggler-icon" src="assets/img/menu-icon.png" />
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="list-container p-0">
+              <button class="d-md-none navbar-toggler cancel-btn ms-auto" type="button">
+                <img class="toggler-icon cancel-icon" src="assets/img/cancel-icon.png" />
+              </button>
               <ul
-                class="navbar-nav d-flex align-items-center justify-content-between gap-4"
+                class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-4 m-0 p-0"
               >
                 <li class="nav-item">
                   <a class="nav-link" href="#buyer">Start Buying</a>
@@ -64,14 +59,18 @@
                   <a class="nav-link" href="#contact">Contact Us</a>
                 </li>
               </ul>
+
+              <div class="action-bar d-block d-md-none mt-4">
+                <a href="" class="signup-btn p-0 d-block m-auto">
+                  Sign Up/Login
+                </a>
+              </div>
             </div>
           </nav>
         </div>
 
-        <div class="action-bar d-none d-md-block col-md-3 p-0 m-0">
-          <button type="button" class="signup-btn m-0 p-0">
-            Sign Up/Login
-          </button>
+        <div class="action-bar d-none d-md-block p-0 m-0">
+          <a href="" class="signup-btn m-0 p-0"> Sign Up/Login </a>
         </div>
       </header>
 
@@ -109,7 +108,9 @@
           </p>
         </div>
 
-        <div class="card-container">
+        <div
+          class="card-container d-flex flex-column flex-md-row justify-content-between gap-3 mt-5 position-relative"
+        >
           <img
             src="assets/img/card-cont-ill.png"
             alt=""
@@ -193,7 +194,8 @@
           <h2 class="heading mt-5">Find What You Love</h2>
         </div>
         <div class="section-container row-container">
-          <img src="assets/img/walking2.gif" alt="" class="walking-guy" />
+          <img src="assets/img/torn-paper.png" class="after" />
+          <img src="assets/img/happybuyer.png" alt="" class="happybuyer" />
           <div class="row align-items-center">
             <div class="col-12 col-md-6">
               <div class="img-box">
@@ -331,7 +333,7 @@
       <!-- Footer -->
       <footer class="section-container site-footer m-0">
         <div class="row">
-          <div class="col-12 col-md-8 p-0">
+          <div class="col-12 col-md-8">
             <div class="logo-container d-flex align-items-center gap-1">
               <img src="assets/img/logo-white.png" alt="" class="site-logo" />
               <h1 class="site-name m-0 p-0">Averion</h1>
@@ -341,7 +343,7 @@
               and enjoy a safe, seamless buying experience every time.
             </p>
           </div>
-          <div class="col-12 col-md-2 p-0">
+          <div class="col-12 col-md-2">
             <div class="text-box">
               <h6 class="nav-bar-heading">Quick Menu</h6>
               <ul class="nav-bar">
@@ -351,7 +353,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-12 col-md-2 p-0">
+          <div class="col-12 col-md-2">
             <div class="text-box">
               <h6 class="nav-bar-heading">Legal</h6>
               <ul class="nav-bar">
@@ -365,10 +367,10 @@
 
         <hr class="footer-separator" />
 
-        <div class="row mt-5">
-          <div class="col-12 col-md-6 order-md-2 p-0">
+        <div class="row mt-4 mt-md-5">
+          <div class="col-12 col-md-6 order-md-2">
             <div
-              class="social-icon-container d-flex align-items-center gap-3 justify-content-center justify-content-md-between"
+              class="social-icon-container d-flex align-items-center ms-md-auto gap-3 gap-md-2 justify-content-center justify-content-md-between"
             >
               <a href="">
                 <img
@@ -401,7 +403,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-6 order-md-1 p-0">
+          <div class="col-12 col-md-6 order-md-1">
             <p class="copryright-text m-0">&copy; 2025 Copyright by Averion</p>
           </div>
         </div>
