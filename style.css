@@ -165,7 +165,8 @@ button {
 
   .site-header .navbar-toggler {
     display: block;
-    width: fit-content;
+    width: 45px;
+    height: 45px;
     border: none !important;
     border-radius: 50px !important;
     background-color: var(--header-bg-color) !important;
@@ -175,7 +176,7 @@ button {
   }
 
   .site-header .navbar-toggler.cancel-btn {
-    padding: 8px !important
+    padding: 8px !important;
   }
 
   .site-header nav ul {
@@ -461,7 +462,7 @@ section.what-you-love .row-container p {
   position: absolute;
   top: 20px;
   left: -30px;
-  width: 100%;
+  width: 490px;
 }
 
 @media screen and (max-width: 767px) {
@@ -570,7 +571,7 @@ hr.footer-separator {
   }
 
   .site-footer .paragraph {
-    width: 100% !important;
+    margin: auto;
   }
 
   .site-footer .logo-container {
