@@ -24,7 +24,6 @@
   font-size: 20px;
   font-family: 'Space Grotesk', sans-serif;
   font-optical-sizing: auto;
-  font-style: normal;
   color: var(--text-primary);
   scroll-behavior: smooth;
 }
@@ -269,6 +268,13 @@ button {
   }
 }
 
+/* Why Averion Section */
+
+section.why-averion .section-text-box {
+  max-width: 520px;
+  margin: auto;
+}
+
 /* Card section */
 
 .card-cont-illustration {
@@ -322,6 +328,10 @@ button {
 }
 
 @media screen and (max-width: 767px) {
+  section.why-averion .section-text-box {
+    max-width: 100%;
+  }
+
   .card-container {
     margin-top: 220px !important;
   }
