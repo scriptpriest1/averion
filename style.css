@@ -235,6 +235,17 @@ button {
   font-size: 67px !important;
   font-weight: 800 !important;
   color: var(--button-text-color);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* hidden state during switch */
+.hero .welcome-heading.fade-out {
+  opacity: 0;
+  transform: translateY(5px);
 }
 
 .hero .welcome-para {

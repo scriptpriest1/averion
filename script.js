@@ -13,21 +13,23 @@ $(document).ready(function () {
   // Hero section heading translation rotation
   $(function () {
     const translations = [
-      '<p class="fs-6 fw-normal position-absolute top-0 start-50" style="transform: translate(-50%, -90%)">Igbo</p>Kedu ihe ịchọrọ ịzụta?', // Igbo
-      '<p class="fs-6 fw-normal position-absolute top-0 start-50" style="transform: translate(-50%, -90%)">Yoruba</p>Kí ni o fẹ́ rà?', // Yoruba
-      '<p class="fs-6 fw-normal position-absolute top-0 start-50" style="transform: translate(-50%, -90%)">Hausa</p>Me kake son siya?', // Hausa
-      '<p class="fs-6 fw-normal position-absolute top-0 start-50" style="transform: translate(-50%, -90%)">Efik</p>Ñkpọ emi ke usen ke ubok ibom mi?', // Efik
-      'What do you want to buy?', // English
+      '<p class="fs-6 fw-normal position-absolute top-0 start-50" style="transform: translate(-50%, -90%)">Igbo</p>Kedu ihe ịchọrọ ịzụta?',
+      '<p class="fs-6 fw-normal position-absolute top-0 start-50" style="transform: translate(-50%, -90%)">Yoruba</p>Kí ni o fẹ́ rà?',
+      '<p class="fs-6 fw-normal position-absolute top-0 start-50" style="transform: translate(-50%, -90%)">Hausa</p>Me kake son siya?',
+      '<p class="fs-6 fw-normal position-absolute top-0 start-50" style="transform: translate(-50%, -90%)">Efik</p>Ñkpọ emi ke usen ke ubok ibom mi?',
+      'What do you want to buy?',
     ];
 
     let i = 0;
-    const heading = $('.hero .welcome-heading');
+    const heading = $('#hero .welcome-heading');
 
     setInterval(() => {
-      heading.fadeOut(500, () => {
-        heading.html(translations[i]).fadeIn(500);
+      heading.addClass('fade-out'); // trigger CSS transition
+      setTimeout(() => {
+        heading.html(translations[i]); // change text mid-fade
+        heading.removeClass('fade-out'); // fade back in
         i = (i + 1) % translations.length;
-      });
+      }, 800); // matches transition duration
     }, 5000);
   });
 
