@@ -25,6 +25,7 @@
   font-family: 'Space Grotesk', sans-serif;
   font-optical-sizing: auto;
   color: var(--text-primary);
+  transition: all 0.3s;
   scroll-behavior: smooth;
 }
 
@@ -40,12 +41,18 @@
   }
 }
 
-a {
+a, .btn-link {
   border: none !important;
   box-shadow: none !important;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: var(--primary-color);
+  background-color: transparent;
 }
 
 input,
+select,
 textarea {
   box-shadow: none !important;
 }
@@ -55,6 +62,10 @@ button {
   border: none;
   border-radius: 4px;
   font-size: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn {
   font-family: 'Inter', sans-serif;
 }
 
@@ -73,8 +84,10 @@ button {
   font-size: 25px;
 }
 
-.form-control {
+.form-control,
+.form-select {
   border: 1px solid var(--ash) !important;
+  border-radius: 5px;
 }
 .form-control::placeholder {
   color: var(--ash) !important;
@@ -159,6 +172,10 @@ button {
     width: 100%;
     height: 100vh;
     background-color: var(--primary-color) !important;
+    background-image: url('./assets/img/illustration-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 20px !important;
   }
 
@@ -609,4 +626,259 @@ hr.footer-separator {
     margin: auto !important;
     margin-bottom: 20px !important;
   }
+}
+
+/************************************************************************************************
+                                        CONTACT PAGE
+************************************************************************************************/
+
+.contact-hero {
+  height: 500px;
+  width: 100%;
+  background-color: var(--primary-color);
+  background-image: url('./assets/img/illustration-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-hero img.hero-illustration {
+  width: 30%;
+  top: 10%;
+}
+
+section.contact-form-section {
+  height: 500px;
+}
+
+.contact-form-container {
+  transform: translateY(-30%);
+  background-color: var(--tertiary-alt-color);
+  border-radius: 20px;
+  padding: 50px 150px 20px;
+}
+
+.contact-form-container .section-text-box {
+  width: 520px;
+  margin: auto;
+}
+
+.contact-form * {
+  font-size: 14px;
+}
+
+.contact-form label {
+  margin-bottom: 8px;
+}
+
+.contact-form textarea {
+  height: 130px;
+  resize: none;
+}
+
+.contact-form .submit-btn {
+  width: fit-content;
+  display: block;
+  margin: auto;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .contact-hero {
+    height: 800px;
+  }
+
+  .contact-hero img.hero-illustration {
+    width: 90%;
+    top: 5%;
+  }
+
+  section.contact-form-section {
+    height: 350px;
+  }
+
+  .contact-form-container {
+    transform: translateY(-72%);
+    padding: 40px 20px;
+  }
+
+  .contact-form-container .section-text-box {
+    width: 100%;
+  }
+
+  .contact-form-container .section-text-box p {
+    font-size: 18px;
+  }
+
+  .contact-form .submit-btn {
+    width: 100%;
+  }
+}
+
+/************************************************************************************************
+                                  LOGIN / REGISTER / AUTH PAGE
+************************************************************************************************/
+section.auth-screen {
+  height: 100vh;
+}
+
+section.auth-screen .il-sect {
+  flex: 4;
+  background-color: var(--primary-color);
+}
+
+section.auth-screen .il-sect .logo-cont {
+  width: fit-content;
+}
+section.auth-screen .il-sect .logo-cont .text {
+  color: var(--text-tertiary);
+}
+
+section.auth-screen .il-sect img.illustration {
+  width: 120%;
+}
+
+section.auth-screen .auth-sect {
+  flex: 7;
+}
+
+.auth-sub-sect {
+  width: 560px;
+  margin: auto;
+}
+
+.auth-sub-sect .section-text-box .heading {
+  font-family: 'Space Grotesk';
+}
+
+.auth-sub-sect .section-text-box p {
+  font-size: 16px;
+}
+
+.auth-form label {
+  margin-bottom: 7px;
+  font-size: 14px;
+}
+
+.auth-form .form-control,
+.auth-form .form-control::placeholder {
+  font-size: 16px;
+}
+
+.auth-form .forgot-pass-link {
+  font-size: 16px;
+  color: var(--primary-color);
+  font-family: 'Inter', sans-serif;
+}
+
+.auth-form .btn-group {
+  width: 245px;
+  margin: auto;
+}
+
+.auth-sub-sect .btn-group .submit-btn {
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--text-tertiary);
+}
+
+.auth-sub-sect .btn-group .alt-btn {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Step type btn-group */
+.auth-sub-sect .btn-group.step {
+  width: fit-content;
+  margin: auto;
+}
+@media screen and (max-width: 767px) {
+  .auth-sub-sect .btn-group.step {
+    width: 100%;
+  }
+  .auth-sub-sect .btn-group.step .submit-btn {
+    order: 1;
+    width: 100%;
+  }
+  .auth-sub-sect .btn-group.step .alt-btn {
+    order: 2;
+    width: 100%;
+  }
+}
+
+footer.auth-footer {
+  padding: 0 20px !important;
+}
+
+footer.auth-footer .inner {
+  border-top: 1px solid var(--ash);
+  padding: 20px 0;
+}
+
+footer.auth-footer p.copyright {
+  font-size: 14px;
+  color: var(--ash);
+}
+
+@media screen and (max-width: 767px) {
+  section.auth-screen {
+    height: 100%;
+  }
+
+  section.auth-screen .il-sect {
+    flex: 400px;
+    background-color: var(--primary-color);
+  }
+
+  .auth-sub-sect {
+    width: 100%;
+    padding: 30px 20px 0;
+  }
+
+  .auth-sub-sect .section-text-box * {
+    text-align: center;
+  }
+
+  .auth-sub-sect .btn-group {
+    width: 100%;
+  }
+}
+
+/* REGISTER PAGE */
+.photo-upload-container .heading {
+  font-size: 24px;
+  color: var(--primary-color);
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--ash);
+}
+
+.photo-upload-container .img-preview-cont {
+  width: 245px;
+}
+
+.photo-upload-container .preview-img-box {
+  width: 245px;
+  height: 245px;
+  overflow: hidden;
+  background-color: #d9d9d9;
+}
+
+.photo-upload-container .upload-btn {
+  border-radius: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--text-tertiary);
+}
+
+.photo-upload-container .upload-btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.photo-upload-container .upload-btn * {
+  fill: var(--text-tertiary);
+  color: var(--text-tertiary);
+  font-size: 14px;
 }
