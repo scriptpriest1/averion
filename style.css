@@ -783,6 +783,7 @@ section.auth-screen .auth-sect {
   margin: auto;
   position: relative;
   overflow-y: auto !important;
+  padding-top: 10px !important;
   padding-bottom: 150px !important;
 }
 
