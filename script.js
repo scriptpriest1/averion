@@ -46,23 +46,23 @@ $(document).ready(function () {
     $('.step-indicator').text(`Step ${currentStep} of ${totalSteps}`);
 
     $(document).on('click', '.auth-screen .next-btn', function () {
-      $('.auth-screen .auth-sect').scrollTop(0);
       $('body, html').scrollTop(0);
       if (currentStep < totalSteps) {
         steps.eq(currentStep - 1).hide();
         currentStep++;
         steps.eq(currentStep - 1).fadeIn(300);
+        steps.eq(currentStep - 1).scrollTop(0);
         $('.step-indicator').text(`Step ${currentStep} of ${totalSteps}`);
       }
     });
 
     $(document).on('click', '.auth-screen .prev-btn', function () {
-      $('.auth-screen .auth-sect').scrollTop(0);
       $('body, html').scrollTop(0);
       if (currentStep > 1) {
         steps.eq(currentStep - 1).hide();
         currentStep--;
         steps.eq(currentStep - 1).fadeIn(300);
+        steps.eq(currentStep - 1).scrollTop(0);
         $('.step-indicator').text(`Step ${currentStep} of ${totalSteps}`);
       }
     });
