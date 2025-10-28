@@ -31,6 +31,23 @@
 
 /* General Stylings */
 
+/* Hide scrollbars for all browsers while maintaining scroll functionality */
+/* For Webkit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* For IE and Edge */
+* {
+  -ms-overflow-style: none;
+}
+
+
 .section-container {
   padding: 100px 120px;
 }
@@ -41,7 +58,8 @@
   }
 }
 
-a, .btn-link {
+a,
+.btn-link {
   border: none !important;
   box-shadow: none !important;
   padding: 0;
@@ -720,7 +738,8 @@ section.contact-form-section {
     width: 100%;
   }
 
-  .contact-form-container .section-text-box p {
+  .contact-form-container .section-text-box p,
+  .contact-form-container .section-text-box p * {
     font-size: 18px;
   }
 
@@ -754,11 +773,16 @@ section.auth-screen .il-sect img.illustration {
 
 section.auth-screen .auth-sect {
   flex: 7;
+  position: relative;
 }
 
 .auth-sub-sect {
   width: 560px;
+  height: 100%;
   margin: auto;
+  position: relative;
+  overflow-y: auto !important;
+  padding-bottom: 150px !important;
 }
 
 .auth-sub-sect .section-text-box .heading {
@@ -808,6 +832,9 @@ section.auth-screen .auth-sect {
   margin: auto;
 }
 @media screen and (max-width: 767px) {
+  section.auth-screen .il-sect {
+    display: none;
+  }
   .auth-sub-sect .btn-group.step {
     width: 100%;
   }
@@ -823,6 +850,11 @@ section.auth-screen .auth-sect {
 
 footer.auth-footer {
   padding: 0 20px !important;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--tertiary-alt-color);
 }
 
 footer.auth-footer .inner {
@@ -847,7 +879,7 @@ footer.auth-footer p.copyright {
 
   .auth-sub-sect {
     width: 100%;
-    padding: 30px 20px 0;
+    padding: 30px 20px 150px !important;
   }
 
   .auth-sub-sect .section-text-box * {
