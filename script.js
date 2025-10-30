@@ -89,3 +89,4 @@ $(document).ready(function () {
     $(this).siblings('.file-input').trigger('click');
   });
 });
+

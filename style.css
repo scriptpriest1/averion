@@ -47,7 +47,6 @@
   -ms-overflow-style: none;
 }
 
-
 .section-container {
   padding: 100px 120px;
 }
@@ -751,6 +750,28 @@ section.contact-form-section {
 /************************************************************************************************
                                   LOGIN / REGISTER / AUTH PAGE
 ************************************************************************************************/
+
+/* General OTP Input Styling */
+.otp-container {
+display: flex;
+gap: 10px;
+}
+.otp-box {
+width: 50px;
+height: 50px;
+font-size: 24px;
+text-align: center;
+border: 2px solid #ccc;
+border-radius: 8px;
+outline: none;
+transition: border-color 0.3s, box-shadow 0.3s;
+}
+.otp-box:focus {
+border-color: #007bff;
+box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+/* Auth screens */
 section.auth-screen {
   height: 100vh !important;
 }
