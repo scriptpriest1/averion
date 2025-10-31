@@ -767,8 +767,12 @@ outline: none;
 transition: border-color 0.3s, box-shadow 0.3s;
 }
 .otp-box:focus {
-border-color: #007bff;
-box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+border-color: var(--primary-color);
+box-shadow: 0 0 5px var(--primary-color);
+}
+.otp-box.active {
+border-color: var(--primary-color);
+box-shadow: 0 0 5px var(--primary-color);
 }
 
 /* Auth screens */
